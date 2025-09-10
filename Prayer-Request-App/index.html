@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anonymous Prayer Requests</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+  <main class="max-w-xl mx-auto p-6">
+    <header class="text-center my-8">
+      <h1 class="text-3xl font-bold">Anonymous Prayer Requests</h1>
+      <p class="mt-2 text-sm text-gray-600">“Cast all your anxiety on Him because He cares for you.” — 1 Peter 5:7</p>
+    </header>
+
+    <form id="prayerForm" class="bg-white shadow rounded-2xl p-6 space-y-5" autocomplete="off" novalidate>
+      <textarea id="message" name="message" required rows="6" maxlength="2000"
+        class="w-full rounded-xl border border-gray-300 p-3"
+        placeholder="Share your prayer request. No names, emails, or identifiers needed."></textarea>
+
+      <button type="submit" id="submitBtn"
+        class="w-full rounded-xl bg-indigo-600 text-white font-semibold py-3 hover:bg-indigo-700 transition">
+        Send Request
+      </button>
+      <p id="status" class="text-sm mt-2"></p>
+    </form>
+  </main>
+</body>
+</html>
