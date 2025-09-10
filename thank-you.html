@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+  <main class="max-w-xl mx-auto p-6">
+    <section class="bg-white rounded-2xl shadow p-6 space-y-4 text-center">
+      <h1 class="text-2xl font-bold">Thank You</h1>
+      <p class="text-gray-700">
+        Your prayer request has been received by our prayer team. We’re honored to lift you up.
+      </p>
+
+      <p id="requestId" class="text-xs text-gray-500"></p>
+
+      <blockquote class="mt-4 p-4 bg-indigo-50 text-indigo-900 rounded-xl">
+        <p class="italic">
+          “For God so loved the world, that he gave his only begotten Son,
+          that whosoever believeth in him should not perish, but have everlasting life.”
+        </p>
+        <footer class="mt-2 text-xs font-semibold">— John 3:16 (KJV)</footer>
+      </blockquote>
+
+      <a href="/" class="inline-block mt-4 rounded-xl bg-indigo-600 text-white px-4 py-2 hover:bg-indigo-700">
+        Submit another request
+      </a>
+    </section>
+  </main>
+
+  <script>
+    // Show Request ID if present
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+    if (id) {
+      document.getElementById('requestId').textContent = `Request ID: ${id}`;
+    }
+  </script>
+</body>
+</html>
